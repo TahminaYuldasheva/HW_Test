@@ -40,8 +40,8 @@ public class ZipCodeTest {
         browser.get("https://www.sharelane.com/cgi-bin/register.py");
         browser.findElement(By.name("zip_code")).sendKeys("12345");
         browser.findElement(By.cssSelector("[value = Continue]")).click();
-        WebElement email = browser.findElement(By.name("email"));
-        Assert.assertTrue(email.isDisplayed());
+        WebElement registerField = browser.findElement(By.cssSelector("[value=Register]"));
+        Assert.assertTrue(registerField.isDisplayed());
         browser.quit();
     }
 
